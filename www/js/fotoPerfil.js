@@ -37,7 +37,7 @@
       $el.wrap('<form>').closest('form').get(0).reset();
       $el.unwrap();
        });
-
+/*
     function archivoA(evt){
       var filesA = evt.target.files; // FileList object
       // Obtenemos la imagen del campo "file".
@@ -78,7 +78,7 @@
       $el.wrap('<form>').closest('form').get(0).reset();
       $el.unwrap();
        });
-
+*/
 });    
   $('#TernimosCondiciones').on('shown.bs.modal', function () {
    //$('#myInput').focus()
