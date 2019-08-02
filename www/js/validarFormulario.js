@@ -1,7 +1,5 @@
 
 $(document).ready(function(){
-
-
     $("#nombre").change(function(){ //validar nombre
         $nombre = $("#nombre").val();       
         if(!(/^[a-zA-Z ]+$/.test($nombre))) {
@@ -95,6 +93,34 @@ $(document).ready(function(){
             //
             $("#mensajeErrorCContrasenya").html("");
         }
+    });
+    $("#formIngreso").submit(function(){
+        //$error=true;    
+        
+        $inEmail = $("#inEmail").val();         
+        if (!(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test($inEmail))) {
+            $inEmailError = "Ingresa un correo electrónico válido.";
+            $("#mensajeErrorEmailI").html($inEmailError);
+            return false;
+            //$error = false;
+        } else{
+            //
+            $("#mensajeErrorEmailI").html("");
+        }
+        /*if ($("#inEmail").val()==" ") {
+            $("#mensajeErrorEmailI").html("");
+        }*/
+        $inPassword = $("#inPassword").val();       
+        if($inPassword == null || $inPassword.length < 6 ) {
+            $inPasswordError = "La contraseña debe tener un mínimo de 6 caracteres.";
+            $("#mensajeErrorPasswordI").html($inPasswordError);
+            return false;
+            //$error = false;
+        } else{
+            //
+            $("#mensajeErrorPasswordI").html("");
+        }
+       iniciarSession();     
     });
     $("#formRegistro").submit(function(){
         //$error=true;

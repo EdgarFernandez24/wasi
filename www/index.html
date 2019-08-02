@@ -34,19 +34,19 @@
             <div class="form-group">         
              <div class="inner-addon left-addon">
               <i class="glyphicon glyphicon-envelope"></i>
-              <input type="email" class="form-control" name="inEmail" id="inEmail" required placeholder="ejemplo@email.com">
+              <input type="email" class="form-control" name="inEmail" id="inEmail"  placeholder="ejemplo@email.com" required >
              </div>
              <span class="text-danger-custom" id="mensajeErrorEmailI"></span>
             </div>
             <div class="form-group">
              <div class="inner-addon left-addon">
               <i class="glyphicon glyphicon-lock"></i>
-              <input type="password" class="form-control" name="inPassword" id="inPassword" required placeholder="Contraseña">
+              <input type="password" class="form-control" name="inPassword" id="inPassword"  placeholder="Contraseña" required >
              </div>
-             <span class="text-danger"></span>
+             <span class="text-danger-custom" id="mensajeErrorPasswordI"></span>
             </div>           
             <div class="form-group">          
-             <button name="btnIngresar" onclick="iniciarSession()" id ="btnIngresar" class="btn btn-primary btn-md btn-block btnFormulario" value="1" >Iniciar Sesion</button>
+             <button name="btnIngresar" onclick="" id ="btnIngresar" class="btn btn-primary btn-md btn-block btnFormulario" value="1" >Iniciar Sesion</button>
              <input type="reset" value="Limpiar" class="btn btn-default btn-md btn-block btnReset" id="limpiar">
             </div>
            </fieldset>
@@ -170,7 +170,7 @@
           </div>         
           <div class="checkbox">
             <label class="label-custom">
-              <input type="checkbox" name="terminosCond" id="terminosCond" required=""--> 
+              <input type="checkbox" name="terminosCond" id="terminosCond" required=""> 
               <!-- Button trigger modal -->
               <input type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#ternimosCondiciones" value="Terminos y condiciones"><span class="text-danger"></span>
             </label>
