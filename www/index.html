@@ -27,7 +27,7 @@
        </div>
        <div class="panel-cuerpo">
         <div class="tab-content tab-content-custom-inicio">    
-         <div class="tab-pane fade in active" id="ingreso"> 
+        <div class="tab-pane fade in active" id="ingreso"> 
           <form role="form" name="formIngreso" id="formIngreso" class="form-registro-inicio" enctype="multipart/form-data">
            <fieldset>
             <legend class="label-custom">Ingresar</legend>
@@ -57,7 +57,7 @@
            <div class="text-center label-custom-gris "> No tienes cuenta? <a href="#registrar" id="linkRegistrar" > Regitrate aqui.! </a>
            </div>
           </div>
-          <!--div class="div-sucundario"><img src="" width="100%" id="miImg"><input type="button" name="miCamara" value="camara"id="miCamara" onclick="getCamara()">publicar en obras</div-->
+            <!--div class="div-sucundario"><img src="" width="100%" id="miImg"><input type="button" name="miCamara" value="camara"id="miCamara" onclick="getCamara()">publicar en obras</div-->
           <div class="imgLogo"> 
             <img src="./img/logowasiT.png">       
           </div>
@@ -84,106 +84,107 @@
               <p>Quieres vivir cerca del centro.!</p>
              </div>
             </div>
-           <div class="item">
-            <img src="./img/logoT.png" alt="">
-            <div class="carousel-caption">
+            <div class="item">
+             <img src="./img/logoT.png" alt="">
+             <div class="carousel-caption">
              <h3>WASI</h3>
              <p>Te gustaría compartir los gastos con otros compañeros.!</p>
              </div>
             </div>
            </div>
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-          </a> 
+           <!-- Left and right controls -->
+           <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+           </a>
+           <a class="right carousel-control" href="#myCarousel" data-slide="next">
+           <span class="glyphicon glyphicon-chevron-right"></span>
+           <span class="sr-only">Next</span>
+           </a> 
           </div><!--fin myCarousel-->  
         </div><!--fin tap pane div ingreso-->          
-        <div  class="tab-pane fade" id="registrate">
-         <form role="form" name="formRegistro" id="formRegistro" class="form-registro-inicio" enctype="multipart/form-data" >
-          <fieldset>
-           <legend class="label-custom">Registro</legend>
-           <div class="form-group">
-            <div class="panel foto-collapse-custom">              
-             <div class="panel-heading right">
-              <div data-toggle="collapse" data-target="#collapseFoto"> Sube una foto para tu perfil <i class="glyphicon glyphicon-option-vertical"></i></div>                                             
-             </div>
-             <div id="collapseFoto" class="panel-collapse collapse">
-              <div class="panel-body">
-               <div class="fotoMensaje" style="display:inline-flex;" >
-                <div class="imgRegistro" id="list" name="list">
-                 <span class="glyphicon glyphicon-trash" id="clist"></span>
-                 <input type="file" id="fotoPerfil" name="fotoPerfil" >
-                </div>  
-                <div class="alert" id="" style="padding: 2px;">
-                 <span class="text-danger-custom" id="mensajefoto">
-                 <strong>No es una foto.!</strong> 
-                 </span>
-                 <p class="label-custom-gris">Haz clic en la imagen</p>
-                 <p class="label-custom-gris">para buscar en tus carpetas.</p>                      
+         <div  class="tab-pane fade" id="registrate">
+          <form role="form" name="formRegistro" id="formRegistro" class="form-registro-inicio" enctype="multipart/form-data" >
+           <fieldset>
+            <legend class="label-custom">Registro</legend>
+            <div class="form-group">
+             <div class="panel foto-collapse-custom">              
+              <div class="panel-heading right">
+               <div data-toggle="collapse" data-target="#collapseFoto"> Sube una foto para tu perfil <i class="glyphicon glyphicon-option-vertical"></i>
+               </div>                                             
+              </div>
+              <div id="collapseFoto" class="panel-collapse collapse">
+               <div class="panel-body">
+                <div class="fotoMensaje" style="display:inline-flex;" >
+                 <div class="imgRegistro" id="list" name="list">
+                  <span class="glyphicon glyphicon-trash" id="clist"></span>
+                  <input type="file" id="fotoPerfil" name="fotoPerfil" >
+                 </div>  
+                 <div class="alert" id="" style="padding: 2px;">
+                  <span class="text-danger-custom" id="mensajefoto">
+                  <strong>No es una foto.!</strong> 
+                  </span>
+                  <p class="label-custom-gris">Haz clic en la imagen</p>
+                  <p class="label-custom-gris">para buscar en tus carpetas.</p>                      
+                 </div>
                 </div>
-               </div>
-              </div>                              
+               </div>                              
+              </div>
              </div>
+            </div>                     
+            <div class="form-group">
             </div>
-           </div>                     
-          <div class="form-group">
-          </div>
-          <div class="form-group">         
-            <div class="inner-addon left-addon">
+            <div class="form-group">         
+             <div class="inner-addon left-addon">
               <i class="glyphicon glyphicon-user"></i>
               <input type="text" class="form-control" name="nombre" id="nombre" required placeholder="Nombre" value="">
+             </div>
+             <span class="text-danger-custom" id="mensajeErrorNombre"></span>
             </div>
-            <span class="text-danger-custom" id="mensajeErrorNombre"></span>
-          </div>
-          <div class="form-group">
+           <div class="form-group">
             <div class="inner-addon left-addon">
-              <i class="glyphicon glyphicon-user"></i>
-              <input type="text" class="form-control" name="apellidos" id="apellidos" required placeholder="Apellidos">
+             <i class="glyphicon glyphicon-user"></i>
+             <input type="text" class="form-control" name="apellidos" id="apellidos" required placeholder="Apellidos">
             </div>
             <span class="text-danger-custom" id="mensajeErrorApellidos"></span>
-          </div>
-          <div class="form-group">
+           </div>
+           <div class="form-group">
             <div class="inner-addon left-addon">
               <i class="glyphicon glyphicon-envelope"></i>
               <input type="email" class="form-control" name="EmailR" id="EmailR" required placeholder="ejemplo@email.com">
             </div>
             <span class="text-danger-custom" id="mensajeErrorEmailR"></span>                      
-          </div>                     
-          <div class="form-group">
+           </div>                     
+           <div class="form-group">
             <div class="inner-addon left-addon">
               <i class="glyphicon glyphicon-lock"></i>
               <input type="password" class="form-control" name="contrasenya" id="contrasenya" required placeholder="Contraseña">
             </div>
             <span class="text-danger-custom" id="mensajeErrorContrasenya"></span>
-          </div> 
-          <div class="form-group">
+           </div> 
+           <div class="form-group">
             <div class="inner-addon left-addon">
               <i class="glyphicon glyphicon-lock"></i>
               <input type="password" class="form-control" name="cContrasenya" id="cContrasenya" required placeholder="Repita Contraseña">
             </div>                        
             <span class="text-danger-custom" id="mensajeErrorCContrasenya" ></span>
-          </div>         
-          <div class="checkbox">
+           </div>         
+           <div class="checkbox">
             <label class="label-custom">
               <input type="checkbox" name="terminosCond" id="terminosCond" required=""> 
               <!-- Button trigger modal -->
               <input type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#ternimosCondiciones" value="Terminos y condiciones"><span class="text-danger"></span>
             </label>
-          </div> 
-          <div class="form-group">
+           </div> 
+           <div class="form-group">
             <button id="btnRegistrar" name="btnRegistrar" class="btn btn-primary btn-md btn-block btnFormulario" >Registrar</button>
-          </div>
+           </div>
           </fieldset>
           <span class="text-success" id="mRS"></span>
           <span class="text-danger" id="mRD"></span>            
          </form>
         </div><!-- fin tab pane div registrar-->    
-       </div><!--fin tab-content-->
+        </div><!--fin tab-content-->
        </div><!--panel-body-->
       </div><!--fin paginaInicio-->    
      </div><!--fin divInicio-->
