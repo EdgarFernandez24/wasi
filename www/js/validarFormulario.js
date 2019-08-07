@@ -1,4 +1,4 @@
-
+$emailExiste=0;
 $(document).ready(function(){
     $("#nombre").change(function(){ //validar nombre
         $nombre = $("#nombre").val();       
@@ -52,13 +52,14 @@ $(document).ready(function(){
                 $vEmail = $("#EmailR").val();                   
                 $.ajax({
                     type: "POST",
-                    dataType: 'html',
-                    url: 'http://192.168.1.145/wasiWeb/php/consultaEmail.php',
+                    dataType: 'json',
+                    url: 'http://127.0.0.1/wasiWeb/php/consultaEmail.php',//'http://192.168.1.145/wasiWeb/php/consultaEmail.php',
                     //data: {email : $('#email').val()},
                     data: "email="+$vEmail,
                     success: function(resp){                                                  
                         if(resp){
-                            $('#mensajeErrorEmailR').html(resp);                                    
+                            $('#mensajeErrorEmailR').html(resp.emsg);
+                            $emailExiste=resp.eReg;
                         }
                     },
                     error : function(jqXHR, textStatus, errorThrown) {
@@ -95,8 +96,7 @@ $(document).ready(function(){
         }
     });
     $("#formIngreso").submit(function(){
-        //$error=true;    
-        
+        //$error=true;         
         $inEmail = $("#inEmail").val();         
         if (!(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test($inEmail))) {
             $inEmailError = "Ingresa un correo electrónico válido.";
@@ -123,8 +123,7 @@ $(document).ready(function(){
        iniciarSession();     
     });
     $("#formRegistro").submit(function(){
-        //$error=true;
-    
+        //$error=true;    
         $nombre = $("#nombre").val();       
         if(!(/^[a-zA-Z ]+$/.test($nombre))) {
             $nombreError = "El nombre debe contener solo caracteres del alfabeto y espacio.";        
@@ -156,8 +155,12 @@ $(document).ready(function(){
         } else{
             //
             $("#mensajeErrorEmail").html("");
-        }      
-
+        }       
+        if($emailExiste==1){
+            $emailError="el correo ya existe";
+            return false;
+        }
+        
         $password = $("#contrasenya").val();       
         if($password == null || $password.length < 6 ) {
             $passwordError = "La contraseña debe tener un mínimo de 6 caracteres.";

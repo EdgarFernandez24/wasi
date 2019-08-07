@@ -12,7 +12,7 @@ $(document).ready(function(){
     $datosUsEx=0;
     inicioSesion();
     
-    /* mostrar tabs divInicio*/            
+    /* mostrar tabs divInicio inicio sesion y registrar*/            
     $("#aRegistrar").click(function(){
         $("#aRegistrar").tab('show');
         $('#formRegistro')[0].reset();
@@ -23,8 +23,8 @@ $(document).ready(function(){
     $("#linkRegistrar").click(function(){
         $("#aRegistrar").tab('show');
     });
+    /* mostrar tabs divInicio*/
     /* mostrar tabs divPrincipal paginalistamapas*/
-    /* mostrar tabs divInicio*/            
     $("#btnAtras").click(function() {
         $("#paginaPrincipal").css("display", "block");
         $("#paginaListaMapas").css("display", "none");            
@@ -269,7 +269,7 @@ $(document).ready(function(){
             }
         });
         $divPublicarAct=1;
-}                                
+        }                                
     });
     
     $("#filePublicar").on("change", handleFileSelect);    
@@ -398,20 +398,21 @@ function registrarUsuario(){ //evento activado por onsubmit en validarformulario
 event.preventDefault(); 
     $.ajax({
         type : 'POST',
-        url: 'http://192.168.1.145/wasiWeb/php/registrar.php',
+        
+        url: 'http://127.0.0.1/wasiWeb/php/registrar.php',/*http://192.168.1.145/wasiWeb/php/registrar.php',*/
         dataType : 'json',
-        data: new FormData($("#formRegistro")[0]),//data: $("#formRegistro").serialize(),                
+        data: new FormData($("#formRegistro")[0]),/*$("#formRegistro").serialize(),*/
         async: false,
         cache: false,
         contentType: false,
         processData: false,
         success: function(datosR)
-        {   $("#aIngresar").tab('show');
+        {  /* $("#aIngresar").tab('show');
             if(datosR.uReg==1){
                 $('#mIS').html(datosR.msg+" "+datosR.umEmail);}
                 if(datosR.uReg==0){
-                    $('#mID').html(datosR.msg);}
-                    //alert("exito");
+                    $('#mID').html(datosR.msg);}*/
+                    alert("exito");
         },
         error : function(jqXHR, textStatus, errorThrown) {
                 alert(jqXHR.status +" "+ textStatus+" "+ errorThrown);

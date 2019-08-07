@@ -216,3 +216,9 @@ button.btnFormulario:focus {
     padding: 5px;
     display: none;
 }
+.text-success-custom{
+  color: #cce6ff;
+}
+.text-danger-custom{
+  color: #ffcccc;
+}
