@@ -13,7 +13,8 @@ $(document).ready(function(){
 })
 	function registrarUsuario(){ //evento activado por onsubmit en validarformulario.js
 		event.preventDefault();
-		//var formData = $('#formRegistro').serialize(); 
+		$('mID').html("");
+        $('mIS').html("");
     	$.ajax({
         	type : 'POST',
             url: 'http://127.0.0.1/wasiWeb/php/registrar.php',
@@ -25,7 +26,7 @@ $(document).ready(function(){
         	success: function(datosR)
         	{  $("#aIngresar").tab('show');
             	if(datosR.uReg==1){
-                	$('#mIS').html(datosR.msg);}//+" "+datosR.umEmail);}
+                	$('#mIS').html(datosR.msg + " " + datosR.umEmail);}
                 	if(datosR.uReg==0){
                     	$('#mID').html(datosR.msg);}
                 //alert(datosR.uReg);

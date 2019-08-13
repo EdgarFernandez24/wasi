@@ -1,45 +1,36 @@
 @import "https://fonts.googleapis.com/css?family=Noto+Sans";
 body {
+  
   font-family: 'Noto Sans', sans-serif;
-  background-color: #008080;
-  /*background: url(../img/fondo.jpg) no-repeat center center fixed;
-  background-size: 100% 100%;
-  width: 100%;
-  height:100%;
-*/
-  /*
+  background: url(../img/fondo1440x2560.jpg) no-repeat fixed center center;
+  background-size: cover;
+  /*border: 1px #38DE5B solid;*/
+  height:100vh;
+  width:100%;
+  padding: 0px;
+  margin: 0px;
+  /* border: 1px solid #000;
   -webkit-background-size:100% 100%;
   -moz-background-size:100% 100%;
   -o-background-size:100% 100%;*/
    
     }
-.container {
-  position: absolute;
-    padding: 0;
-    width: 100%;
-    height:100%; 
-    
-    /*border: 1px solid #0CF6DD;*/
-   /* color: #f2f2f2; */
-   border: 1px solid #0CF6DD;
+.container-custom-inicio {
+    padding: 5px;
+    margin: 0px;
+   /*border: 1px solid #0CF6DD;*/
 }
 .container-custom-inicio .div-custom-inicio
 {
-  padding: 20px 10px 10px 10px;
-    top: 10px;
+    padding: 15px 1px 1px 1px;
     margin: 0 auto;    
     width: 100%;
     height: 100%;
-    /*margin:10px 15px 1px 25px;
-    /*padding: 10px 15px 1px 15px;*/
     /*border: 1px #F70BEF solid ;*/
 }
 .navtab-custom-inicio {
-  /*top: 30px;*/
-  /*padding-top: 1px;*/
   margin: 0px 0px 1px 5px;
   /*background-color:#008080;*/
-  color: #000;
   border-radius:1px;
   
   /*border-collapse: collapse;    */
@@ -50,9 +41,6 @@ body {
 .div-custom-inicio .nav-tabs{
   border-bottom: none;
 }
-/*.div-custom-inicio .nav-justified{
-  margin-bottom: -1px;
-}*/
 .div-custom-inicio .nav-tabs > li > a,
 .div-custom-inicio .nav-tabs > li > a:hover,
 .div-custom-inicio .nav-tabs > li > a:focus {
@@ -108,9 +96,12 @@ opacity: 0;
 .tab-pane img{
   width: 75px;
   height: 75px;
-  margin: 10px auto;  
+  margin: 10px auto;
+  
 }
+
 .tab-pane .imgLogo{
+  
   text-align: center;   
 } 
 /*img carrusel */
@@ -118,6 +109,7 @@ opacity: 0;
   margin: 0 auto;
   padding: 0px;
   width: 100%;
+  background: transparent;
 }
 .container .label-custom {    
     color:#f2f2f2;
@@ -177,6 +169,7 @@ visibility: hidden;
 border-radius: 2px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 color:#008080; 
+text-align: center;
 }
 /* iconos dentro del input tipo 2*/
 
