@@ -36,3 +36,39 @@ $(document).ready(function(){
         	}
     	});    
 	}
+function iniciarSession(){
+    $('#mIS').html(" ");
+    $('#mID').html(" ");
+    //alert("entra btn inicio");
+    event.preventDefault();
+    $.ajax({
+        //
+        type :'POST',
+        url:'http://127.0.0.1/wasiWeb/php/ingresar.php', //'http://192.168.1.145/wasiWeb/php/ingresar.php',
+        dataType : 'json',        
+        data: new FormData($("#formIngreso")[0]),        
+        //async: false,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(datosI){   
+            //alert("entra ajax");
+            if(datosI.usr==1){
+                $datosRemoto=JSON.stringify(datosI);
+                localStorage.setItem('datosInicioSesion', $datosRemoto);
+                //alert($datosRemoto);
+                $("#divInicio").css("display", "none");
+                $("#divPrincipal").css("display", "block");
+                $('#paginaListaMapas').css("display", "none");
+                inicioSesion();
+            }
+            if (datosI.usr <= 0) {
+                    
+                   $("#mID").html(datosI.mensaje);
+            }
+        },
+        error : function(jqXHR, textStatus, errorThrown) {
+            alert("error de ajax: " + jqXHR.status + " " + textStatus + " " + errorThrown);
+        }
+    });    
+}
