@@ -29,12 +29,12 @@ $(document).ready(function(){
         $("#paginaPrincipal").css("display", "block");
         $("#paginaListaMapas").css("display", "none");            
         })
-        $("#aBuscarLista").click(function(){
+    $("#aBuscarLista").click(function(){
             $("#aBuscarLista").tab('show');
-        });
-        $("#aBuscarMapa").click(function(){
+    });
+    $("#aBuscarMapa").click(function(){
             $("#aBuscarMapa").tab('show');
-        });
+    });
     /* mostrar div buscarlistamapas*/    
     $("#linkBuscarListaMapa").click(function(){
         event.preventDefault(); 
@@ -45,7 +45,7 @@ $(document).ready(function(){
     /*$(".nav-tabs a").click(function(){
         $(this).tab('show');
     });*/
-    /* mostrar tabs div busacr*/            
+    /* mostrar tabs div buscar*/            
     $("#icoBuscar").click(function(){
         //event.preventDefault();
         $(".icoFooter .glyphicon-search").css({"color":"#00cccc"});

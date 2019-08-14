@@ -11,14 +11,31 @@ $(document).ready(function(){
     $("#linkRegistrar").click(function(){
         $("#aRegistrar").tab('show');
     });
+    $("#linkBuscarListaMapa").click(function(){
+        event.preventDefault(); 
+        $("#paginaPrincipal").css("display", "none");
+        $("#paginaListaMapas").css("display", "block");
+        $("#divFooter").css("display", "none");
+    });     
+    $("#btnAtras").click(function() {
+        $("#paginaPrincipal").css("display", "block");
+        $("#paginaListaMapas").css("display", "none");
+        $("#divFooter").css("display", "block");            
+        })
+    $("#aBuscarLista").click(function(){
+            $("#aBuscarLista").tab('show');
+    });
+    $("#aBuscarMapa").click(function(){
+            $("#aBuscarMapa").tab('show');
+    });
+
+    /*pagina buscar */
     $("#icoBuscar").click(function(){
         //event.preventDefault();
         $(".icoFooter .glyphicon-search").css({"color":"#008080"});
-        $(".icoFooter .glyphicon-envelope").css({"color":"rgb(128, 128, 128,.8)"});
-        
-        $(".icoFooter .glyphicon-user").css({"color":"rgb(128, 128, 128,.8)"});
         $(".icoFooter .glyphicon-upload").css({"color":"rgb(128, 128, 128,.8)"});
-
+        $(".icoFooter .glyphicon-comment").css({"color":"rgb(128, 128, 128,.8)"});
+        $(".icoFooter .glyphicon-user").css({"color":"rgb(128, 128, 128,.8)"});
         /*$("#icoBuscar").css({"transform":"scale(1.5,1)","width":"25%","color":"#00cccc"});        
         $("#icoSolicitud").css({"transform":"scale(1,1)","width":"15%"});
         $("#icoChat").css({"transform":"scale(1,1)","width":"15%"});
@@ -27,17 +44,16 @@ $(document).ready(function(){
         */
         $("#paginaPrincipal").css("display", "block");
         $("#paginaListaMapas").css("display", "none");            
-        $("#paginaSolicitud").css("display", "none");
-        $("#paginaChat").css("display", "none");            
-        $("#paginaUsuarioPerfil").css("display", "none");
         $("#paginaPublicar").css("display", "none");                        
-
+        $("#paginaMensaje").css("display", "none");            
+        $("#paginaUsuarioPerfil").css("display", "none");
+        
         $("#icoFMBuscar").css({"color":"#008080"});
-        $("#icoFMSolicitud").css({"color":"rgb(128, 128, 128,.8)"});            
-        $("#icoFMChat").css({"color":"rgb(128, 128, 128,.8)"});            
-        $("#icoFMPerfil").css({"color":"rgb(128, 128, 128,.8)"});
         $("#icoFMPublicar").css({"color":"rgb(128, 128, 128,.8)"});                       
+        $("#icoFMMensaje").css({"color":"rgb(128, 128, 128,.8)"});            
+        $("#icoFMPerfil").css({"color":"rgb(128, 128, 128,.8)"});
     });
+
 })
 function inicioSesion(){
     $datosLocal=JSON.parse(localStorage.getItem('datosInicioSesion'));
@@ -47,9 +63,11 @@ function inicioSesion(){
         $("#imgPerfil").attr({"src":"http://127.0.0.1/wasiWeb/"+ $datosLocal['usrImg']});// fotos/eddyfer_77@hotmail.com/paisaje1.jpg}); //mostramos foto por defecto 
           
         //$("#imgP").html($datosLocal['usrImg']);
+        $("body").css("background","#f2f2f2");
         $("#divInicio").css("display", "none");
         $("#divPrincipal").css("display", "block");
-        $("body").css("background","#f2f2f2");
+        $("#icoFMBuscar").css({"color":"#008080"});
+        $(".icoFooter .glyphicon-search").css({"color":"#008080"});
         $idCliente = $datosLocal['usrId'];
         $emailCliente = $datosLocal['usrEmail'];    
         //alert($datosLocal['usrEmail'] + " " + $datosLocal['usrId']);

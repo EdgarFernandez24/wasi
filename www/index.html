@@ -198,7 +198,7 @@
                 <input type="text" class="form-control" placeholder="Buscar en WASI" />
               </div>
             </div>
-            <div id="mensajeDondeVivir">
+            <div class="mensajeDondeVivir" id="mensajeDondeVivir">
               <div class="text-center ">
                 <div id="linkBuscarListaMapa" ><span id="nombreCompleto"></span> mapa y listas Aqui!  <i class="glyphicon glyphicon-map-marker"></i>
                 </div>                      
@@ -242,6 +242,133 @@
           </div>        
         </div> 
       </div> <!--fin paginaPrincipal-->
+      <!-- inicio buscar por lista o mapas -->
+      <div class="div-custom-principal" id="paginaListaMapas">
+        <div class="header navbar-fixed-top" ><span class="glyphicon glyphicon glyphicon-arrow-left" id="btnAtras"><span>  ubicacion del usuario</span> </span>
+          <ul class="nav nav-tabs navtab-custom-principal "> <!---->
+            <li class="active"><a href="#buscarLista" id="aBuscarLista"><span class="glyphicon glyphicon-th-list"></span> Listado</a></li>
+            <li><a href="#buscarMapa" id="aBuscarMapa"><span class="glyphicon glyphicon-map-marker"></span> Mapa </a></li>    
+          </ul>
+        </div>    
+        <div class="tab-content tab-content-custom-principal">
+          <div id="buscarLista" class="tab-pane buscarLista fade in active">
+            <form role="form" name="formBuscarLista" id="formBuscarLista" class="form-principal" enctype="multipart/form-data">
+              <div class="fotosLista colorFondo">
+                <div class="foto">
+                  <div class="">
+                    <strong>nombre de usuario contacto</strong> foto perfil
+                  </div>
+                  <img src="./img/barcelona1.jpg"  class="">      
+                  <div class="">
+                    <strong>precio 1</strong> dato 2
+                  </div>
+                </div>
+                <div class="foto">
+              <div class="">
+                <strong>nombre de usuario contacto</strong> foto perfil
+              </div>
+              <img src="./img/barcelona3.jpg"  class="">      
+              <div class="">
+                <strong>precio 1</strong> dato 2
+              </div>
+                </div>
+                <div class="foto">
+              <div class="">
+                <strong>nombre de usuario contacto</strong> foto perfil
+              </div>
+              <img src="./img/madrid1.jpg"  class="">      
+              <div class="">
+                <strong>precio 1</strong> dato 2
+              </div>
+                </div>
+                <div class="foto">
+              <div class="">
+                <strong>nombre de usuario contacto</strong> foto perfil
+              </div>
+              <img src="./img/londres1.jpg"  class=""><!--width="150" height="100"-->
+              <div class="">
+                <strong>precio 1</strong> dato 2
+              </div>
+                </div>
+                <div class="foto">
+              <div class="">
+                <strong>nombre de usuario contacto</strong> foto perfil
+              </div>
+              <img src="./img/londres1.jpg"  class=""><!--width="150" height="100"-->
+              <div class="">
+                <strong>precio 1</strong> dato 2
+              </div>
+                </div>
+              </div>
+            </form>          
+          </div><!--fin buscar lista-->
+          <div id="buscarMapa" class="tab-pane fade buscarMapa">            
+            <div class="fotosMapa colorFondo">
+              <div class="fotoH">
+                <div class="">
+                  <strong>nombre de usuario contacto</strong> foto perfil
+                </div>
+                <img src="./img/barcelona1.jpg"  class="">
+                <div class="">
+                  <strong>barcelona ciudad 1</strong> zona 1
+                </div>      
+              </div>                  
+              <div class="fotoH">
+                <div class="">
+                  <strong>nombre de usuario contacto</strong> foto perfil
+                </div>
+                <img src="./img/barcelona3.jpg"  class="">      
+                
+                <div class="">
+                  <strong>barcelona 1</strong> zona 1
+                </div>          
+              </div>
+              <div class="fotoH">
+                <div class="">
+                  <strong>nombre de usuario contacto</strong> foto perfil
+                </div>
+                <img src="./img/madrid1.jpg"  class="">      
+                <div class="">  
+                  <strong>barcelona 1</strong> zona 1
+                </div>
+              </div>
+              <div class="fotoH">
+                <div class="">
+                  <strong>nombre de usuario contacto</strong> foto perfil
+                </div>
+                <img src="./img/barcelona3.jpg"  class=""><!--width="150" height="100"-->
+                <div class="">
+                  <strong>barcelona 1</strong> zona 1
+                </div>
+              </div>
+              
+              <div class="fotoH" >
+                <div class="">
+                  <strong>nombre de usuario contacto</strong> foto perfil
+                </div>
+                <img src="./img/londres1.jpg"  class=""><!--width="150" height="100"-->
+                <div class="">
+                  <strong>barcelona 1</strong> zona 1
+                </div>
+              </div>
+              
+              <div class="fotoH" >
+                <div class="">
+                  <strong>nombre de usuario contacto</strong> foto perfil
+                </div>
+                  <img src="./img/londres1.jpg"  class=""><!--width="150" height="100"-->
+                <div class="">
+                  <strong>barcelona 1</strong> zona 1
+                </div>
+              </div>
+              
+            </div>
+            <div id="contenedorMapa" class="contenedorMapa">
+              <div id="map"></div>     
+             </div>          
+          </div><!-- buscarMapa-->    
+        </div><!--fin tab-content-->
+      </div><!--fin paginaListaMapas-->
       <div class="div-custom-principal" id="divFooter">
         <div class="navbar-fixed-bottom footer">
           <div class="icoFooter" id="icoBuscar">
@@ -253,9 +380,9 @@
             <span class="glyphicon glyphicon-upload"></span>
             <div class="icoFooterMensaje" id="icoFMPublicar">Publicar</div>
           </div>
-          <div class="icoFooter" id="icoSolicitud">
-            <span class="glyphicon glyphicon-envelope"></span>
-            <div class="icoFooterMensaje" id="icoFMSolicitud">Mensaje
+          <div class="icoFooter" id="icoMensaje">
+            <span class="glyphicon glyphicon-comment"></span>
+            <div class="icoFooterMensaje" id="icoFMMensaje">Mensaje
             </div>
           </div>
                 
