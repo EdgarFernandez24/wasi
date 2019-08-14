@@ -184,10 +184,90 @@
                 <span class="text-danger" id="mRD"></span>            
               </form>
             </div><!-- fin tab pane div registrar-->    
-          </div><!--fin tab-content-->
-        
+          </div><!--fin tab-content-->        
       </div><!--fin paginaInicio-->    
     </div><!--fin divInicio-->
+    <div class="container container-custom-principal" id="divPrincipal"> 
+      <div class="div-custom-principal " id="paginaPrincipal">
+        <div class="header navbar-fixed-top" id="btnSalir"><!--span class="glyphicon glyphicon glyphicon-arrow-left"> </span-->
+          <!--span id="imgP"><img src="" id="imgPerfil" class="img-responsive img-circle" style="display:inline" width="25" height="25"></span-->
+          <form role="form" name="formBuscar" id="formBuscar" class="form-principal" enctype="multipart/form-data" >
+            <div class="form-group">
+              <div class="inner-addon right-addon">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="text" class="form-control" placeholder="Buscar en WASI" />
+              </div>
+            </div>
+            <div id="mensajeDondeVivir">
+              <div class="text-center ">
+                <div id="linkBuscarListaMapa" ><span id="nombreCompleto"></span> mapa y listas Aqui!  <i class="glyphicon glyphicon-map-marker"></i>
+                </div>                      
+              </div>
+            </div>
+          </form> 
+        </div><!--fin btnSalir-->
+        <div id="mensajeCiudad" class="text-center" >
+          <div id="" > Ciudad para vivir.!</div>                      
+        </div>   
+        <div class="fotosCiudad colorFondo">        
+          <div class="foto">
+            <img src="./img/barcelona3.jpg" width="300" height="100" class="imgCiudad">      
+          </div>
+          <div class="foto">
+            <img src="./img/madrid1.jpg" width="300" height="100" class="imgCiudad">      
+          </div>
+          <div class="foto">
+            <img src="./img/londres1.jpg" width="300" height="100" class="imgCiudad"><!--width="150" height="100"-->
+          </div>
+        </div>
+        <div id="mensajeBarrios" class="text-center ">
+          <div id="" > Zona para vivir</div>                      
+        </div>              
+        <div class="fotosBarrios colorFondo">
+          <div class="foto">          
+            <img src="./img/barcelona1.jpg" width="150" height="150" class="imgZona">      
+            <strong>barcelona ciudad 1</strong> zona 1
+          </div>
+          <div class="foto">
+            <img src="./img/barcelona3.jpg" width="150" height="150" class="imgZona">      
+            <strong>barcelona ciudad 1</strong> zona 1
+          </div>
+          <div class="foto">
+            <img src="./img/madrid1.jpg" width="150" height="150" class="imgZona">      
+            <strong>barcelona ciudad 1</strong> zona 1
+          </div>
+          <div class="foto">
+            <img src="./img/londres1.jpg" width="150" height="150" class="imgZona"><!--width="150" height="100"-->
+            <strong>barcelona ciudad 1</strong> zona 1
+          </div>        
+        </div> 
+      </div> <!--fin paginaPrincipal-->
+      <div class="div-custom-principal" id="divFooter">
+        <div class="navbar-fixed-bottom footer">
+          <div class="icoFooter" id="icoBuscar">
+            <span class="glyphicon glyphicon-search"></span>
+            <div class="icoFooterMensaje" id="icoFMBuscar">Buscar
+            </div>
+          </div>
+          <div class="icoFooter" id="icoPublicar">
+            <span class="glyphicon glyphicon-upload"></span>
+            <div class="icoFooterMensaje" id="icoFMPublicar">Publicar</div>
+          </div>
+          <div class="icoFooter" id="icoSolicitud">
+            <span class="glyphicon glyphicon-envelope"></span>
+            <div class="icoFooterMensaje" id="icoFMSolicitud">Mensaje
+            </div>
+          </div>
+                
+          <div class="icoFooter" id="icoUsuario">
+            <span class="glyphicon glyphicon-user"></span>
+            <div class="icoFooterMensaje" id="icoFMPerfil">Perfil
+            </div>
+          </div>    
+              
+        </div>
+      </div><!--fin divFooter--> 
+    </div>  <!--fin divPrincipal-->
      <!-- Modal -->
     <div class="modal fade" id="ternimosCondiciones" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">

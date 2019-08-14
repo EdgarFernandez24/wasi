@@ -83,8 +83,8 @@ body {
   color: #f2f2f2; 
   outline: none;
 }
-.form-group ::placeholder{
-  color: rgb(255,255,255,.6);
+.container-custom-inicio .form-group ::placeholder{
+  color: rgb(255,255,255,.7);
 }
 .form-registro-inicio input[type="file"] { 
 width: 100%; 
@@ -138,10 +138,12 @@ opacity: 0;
   position: absolute;
   padding: 10px;
   pointer-events: none;
-  color:#f2f2f2;    
+  color:#008080;    
   /*border: 1px solid #000;*/
 }
-.right .glyphicon { right: 0px;}
+.right .glyphicon { 
+  right: 10px;
+}
 .fotoMensaje { 
 /*display: inline-block;*/
 width: 100%;
@@ -166,47 +168,44 @@ background: #f2f2f2;
 width: 17px;
 height: 17px;
 visibility: hidden;
-border-radius: 2px;
+border-radius: 1px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 color:#008080; 
 text-align: center;
 }
 /* iconos dentro del input tipo 2*/
 
-.inner-addon {
+.container-custom-inicio .inner-addon {
   position: relative;
 }
-.inner-addon .glyphicon {
+.container-custom-inicio .inner-addon .glyphicon {
   position: absolute;
   padding: 10px;
   pointer-events: none;
 }
-.left-addon .glyphicon {
+.container-custom-inicio .left-addon .glyphicon {
   left: 0px;
   color:#009999;  /*#246175;*/
 }
-.right-addon .glyphicon {
-  right: 0px;
-  color: #f2f2f2;  /*#246175;*/
-}
-.left-addon input {
+
+.container-custom-inicio .left-addon input {
   padding-left: 30px;
 }
-.right-addon input {
+.container-custom-inicio .right-addon input {
   padding-right: 30px;
 }
-.container .label-custom {    
+.container-custom-inicio  .label-custom {    
     color:#b3cccc;
 }
-.container .label-custom-gris {
+.container-custom-inicio .label-custom-gris {
   margin: 0;
   text-align: center;    
   color:#b3cccc;
 }
-.container .label-custom-gris a {    
+.container-custom-inicio .label-custom-gris a {    
     color:#f2f2f2;
 }
-button.btnFormulario {
+.container-custom-inicio button.btnFormulario {
     border:none;
     background-color:#008080; 
     text-decoration:none; 
@@ -214,7 +213,7 @@ button.btnFormulario {
     cursor:pointer;
     outline: none;
 }
-button.btnFormulario:focus {
+.container-custom-inicio button.btnFormulario:focus {
     border:none;
     background-color:#004d4d; 
     text-decoration:none; 
@@ -222,17 +221,102 @@ button.btnFormulario:focus {
     cursor:pointer;
     outline: none
 }
-.text-danger-custom{
+.container-custom-inicio.text-danger-custom{
   color: #ffcccc;
 }
-#mensajefoto{
+.container-custom-inicio #mensajefoto{
     margin: auto;
     padding: 5px;
     display: none;
 }
-.text-success-custom{
+.container-custom-inicio .text-success-custom{
   color: #cce6ff;
 }
-.text-danger-custom{
+.container-custom-inicio .text-danger-custom{
   color: #ffcccc;
+}
+/*fin de div container container custom inicio*/
+/*contenerdor principal*/
+#divPrincipal{
+    display: none;        
+}
+.container-custom-principal{
+ background-color: #f2f2f2;
+width: 100%;
+height: 100%;
+}
+.container-custom-principal .header{
+  padding: 10px 10px 0px 10px ;
+  color: #f2f2f2;
+  /*border:1px solid #000;*/
+  /*background-color:rgb(0, 0, 0,0.5 )/*#008080;*/  
+  background-color:#008080;/*rgb(0, 128, 128,0.8 )/**/
+  /*opacity: .95;*/
+}
+.container-custom-principal .inner-addon {
+  position: relative;
+}
+.container-custom-principal .inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.container-custom-principal .right-addon .glyphicon {
+  right: 0px;
+  color: #008080;  /*#f2f2f2#246175;*/
+}
+.container-custom-principal .form-group ::placeholder{
+  color: rgb(128, 128, 128,.6);
+}
+#mensajeCiudad{
+ margin-top: 80px; 
+}
+.fotosCiudad{
+
+display: -webkit-flex; /* Safari */        
+display: grid;
+grid-template-columns: auto ;
+background-color: #f2f2f2;
+border-radius: 2px; 
+}
+.fotosBarrios {
+  
+  margin-bottom: 40px;
+  display: -webkit-flex; /* Safari */        
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+  border-radius: 2px; 
+}
+.foto{
+  display: flex;
+  flex-direction: column;    
+  margin:2px auto;  
+  background-color: #fff;
+  border-radius: 3px;
+   
+}
+/*iconos footer*/
+.container-custom-principal .footer{
+  padding: 0 auto;
+  border-top: 2px solid #b3cccc;
+  /*background-color:rgb(0, 0, 0,0.5 )/*#008080;*/
+  background-color:#f2f2f2;/*rgb(0, 128, 128,0.8 )/**/
+  color: rgb(128, 128, 128,.8);
+  
+}
+.footer .glyphicon {
+  pointer-events: none;
+  color:rgb(128, 128, 128,.8);/*#008080;  */
+}
+ .footer .icoFooter{
+  
+  display: inline-block;
+  width:24%;
+  text-align: center; 
+
+}
+.footer .icoFooterMensaje{
+  font-size: 10px;
+ /* display: none;*/
 }
