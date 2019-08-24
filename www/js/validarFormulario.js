@@ -53,7 +53,7 @@ $(document).ready(function(){
                 $.ajax({
                     type: "POST",
                     dataType: 'json',
-                    url: 'http://127.0.0.1/wasiWeb/php/consultaEmail.php',//'http://192.168.1.145/wasiWeb/php/consultaEmail.php',
+                    url: 'http://192.168.0.161/wasiWeb/php/consultaEmail.php',//'http://192.168.1.145/wasiWeb/php/consultaEmail.php',
                     //data: {email : $('#email').val()},
                     data: "email="+$vEmail,
                     success: function(resp){                                                  

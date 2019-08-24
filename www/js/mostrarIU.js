@@ -60,7 +60,7 @@ function inicioSesion(){
     if($datosLocal!= undefined || $datosLocal!= null ){
        /* $.each($datosLocal, function(key, value){alert(key + ' = ' + value);});*/
         $("#nombreCompleto").html($datosLocal['usrName']);//http://192.168.1.145/wasiWeb/
-        $("#imgPerfil").attr({"src":"http://127.0.0.1/wasiWeb/"+ $datosLocal['usrImg']});// fotos/eddyfer_77@hotmail.com/paisaje1.jpg}); //mostramos foto por defecto 
+        $("#imgPerfil").attr({"src":"http://192.168.0.161/wasiWeb/"+ $datosLocal['usrImg']});// fotos/eddyfer_77@hotmail.com/paisaje1.jpg}); //mostramos foto por defecto 
           
         //$("#imgP").html($datosLocal['usrImg']);
         $("body").css("background","#f2f2f2");
@@ -79,7 +79,7 @@ function registrarUsuario(){ //evento activado por onsubmit en validarformulario
     $('mIS').html("");
     $.ajax({
        	type : 'POST',
-        url: 'http://127.0.0.1/wasiWeb/php/registrar.php',
+        url: 'http://192.168.0.161/wasiWeb/php/registrar.php',
        	data:new FormData($('#formRegistro')[0]),
        	dataType: 'json',
        	cache: false,
@@ -106,7 +106,7 @@ function iniciarSession(){
     $.ajax({
         //
         type :'POST',
-        url:'http://127.0.0.1/wasiWeb/php/ingresar.php', //'http://192.168.1.145/wasiWeb/php/ingresar.php',
+        url:'http://192.168.0.161/wasiWeb/php/ingresar.php', //'http://192.168.1.145/wasiWeb/php/ingresar.php',
         dataType : 'json',        
         data: new FormData($("#formIngreso")[0]),        
         //async: false,
