@@ -81,7 +81,7 @@ function registrarUsuario(){ //evento activado por onsubmit en validarformulario
        	type : 'POST',
         url: 'http://192.168.0.161/wasiWeb/php/registrar.php',
        	data:new FormData($('#formRegistro')[0]),
-       	dataType: 'json',
+       	dataType: 'jsonp',
        	cache: false,
        	contentType: false,
        	processData: false,

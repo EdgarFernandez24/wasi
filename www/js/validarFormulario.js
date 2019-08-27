@@ -56,6 +56,8 @@ $(document).ready(function(){
                     url: 'http://192.168.0.161/wasiWeb/php/consultaEmail.php',//'http://192.168.1.145/wasiWeb/php/consultaEmail.php',
                     //data: {email : $('#email').val()},
                     data: "email="+$vEmail,
+                    crossDomain: true,
+                    cache: false,
                     success: function(resp){                                                  
                         if(resp){
                             $('#mensajeErrorEmailR').html(resp.emsg);
