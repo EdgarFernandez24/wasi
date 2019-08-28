@@ -75,21 +75,24 @@ function inicioSesion(){
 }
 function registrarUsuario(){ //evento activado por onsubmit en validarformulario.js
 	event.preventDefault();
-	$('mID').html("");
-    $('mIS').html("");
+	
+    
     $.ajax({
        	type : 'POST',
         url: 'http://192.168.0.161/wasiWeb/php/registrar.php',
        	data:new FormData($('#formRegistro')[0]),
-       	dataType: 'jsonp',
+       	dataType: 'json',
+        crossDomain: true,
        	cache: false,
        	contentType: false,
        	processData: false,
        	success: function(datosR)
        	{  $("#aIngresar").tab('show');
            	if(datosR.uReg==1){
+                $('mID').html("");
                	$('#mIS').html(datosR.msg + " " + datosR.umEmail);}
                	if(datosR.uReg==0){
+                    $('mIS').html("");
                    	$('#mID').html(datosR.msg);}
                 //alert(datosR.uReg);
        	},
@@ -110,6 +113,7 @@ function iniciarSession(){
         dataType : 'json',        
         data: new FormData($("#formIngreso")[0]),        
         //async: false,
+        crossDomain: true,
         cache: false,
         contentType: false,
         processData: false,

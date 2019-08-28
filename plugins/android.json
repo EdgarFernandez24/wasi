@@ -12,6 +12,9 @@
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.coolappz.wasi3"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.coolappz.wasi3"
     }
   },
   "dependent_plugins": {}
