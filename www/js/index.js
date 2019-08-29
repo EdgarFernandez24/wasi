@@ -36,7 +36,7 @@ var onMapSuccess = function (position) {
 
     Latitude = position.coords.latitude;
     Longitude = position.coords.longitude;
-    alert("lat"+Latitude + "//" + "long" + longitude);
+    alert("lat"+Latitude + "//" + "long" + Longitude);
     getMap(Latitude, Longitude);
 
 }// Get map by using coordinates
