@@ -58,7 +58,7 @@ $(document).ready(function(){
 function inicioSesion(){
     $datosLocal=JSON.parse(localStorage.getItem('datosInicioSesion'));
     if($datosLocal!= undefined || $datosLocal!= null ){
-       /* $.each($datosLocal, function(key, value){alert(key + ' = ' + value);});*/
+        /*$.each($datosLocal, function(key, value){alert(key + ' = ' + value);});*/
         $("#nombreCompleto").html($datosLocal['usrName']);//http://192.168.1.145/wasiWeb/
         $("#imgPerfil").attr({"src":"http://192.168.0.161/wasiWeb/"+ $datosLocal['usrImg']});// fotos/eddyfer_77@hotmail.com/paisaje1.jpg}); //mostramos foto por defecto 
           
