@@ -245,7 +245,7 @@ $(document).ready(function(){
                     alert("exito"+ datosConsulta.datosUsuarioPu.length+" "+datosConsulta.datosE);
                     for ($k = 0; $k < datosConsulta.datosUsuarioPu.length; $k++) {
                         //storedFilesDb[$k]=datosConsulta.datosUsuarioPu[$k];
-                        var html = "<div class = 'fotoPublicar' style='background:url(http://127.0.0.1/wasiWeb/"+datosConsulta.datosUsuarioPu[$k]['ruta']+") no-repeat center center; background-size:75px 75px;' ><span class='glyphicon glyphicon-trash removeImgPublicar' data-file="+datosConsulta.datosUsuarioPu[$k]['nombre_foto']+"></span></div>";
+                        var html = "<div class = 'fotoPublicar' style='background:url(http://192.168.0.160/wasiWeb/"+datosConsulta.datosUsuarioPu[$k]['ruta']+") no-repeat center center; background-size:75px 75px;' ><span class='glyphicon glyphicon-trash removeImgPublicar' data-file="+datosConsulta.datosUsuarioPu[$k]['nombre_foto']+"></span></div>";
                         selDiv.append(html);                        
                     }
                     //storedFilesDb=datosConsulta.datosUsuarioPu;

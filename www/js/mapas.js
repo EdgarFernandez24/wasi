@@ -3,4 +3,10 @@ $(document).ready(function(){
     watchMapPosition();
     getWeatherLocation();
     watchWeatherPosition();
+    autoCompletar();
+   /*$("#direccionMPu").click(function(){
+    	autoCompletar();
+    });
+    */
+    //getPosition();
 });

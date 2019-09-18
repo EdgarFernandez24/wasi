@@ -53,14 +53,14 @@ body {
 .div-custom-inicio .nav-tabs > li > a:hover,
 .div-custom-inicio .nav-tabs > li > a:focus {
   color:  #009999;
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   border-color: transparent;
 }
 .div-custom-inicio .nav-tabs > li.active > a,
 .div-custom-inicio .nav-tabs > li.active > a:hover,
 .div-custom-inicio .nav-tabs > li.active > a:focus {
   color: #009999;
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   border-color: transparent; ;
   
   border-bottom-color: transparent;
@@ -68,9 +68,11 @@ body {
 .container-custom-inicio .tab-content-custom-inicio {
     margin-top:0px;
     padding: 10px;
-    background-color: rgb(0, 0, 0, 0.6);  
+    background-color: rgba(0, 0, 0, 0.6);
     /*border: 1px solid #000;*/
 }
+
+
 /* formularios de inicio y registro */
 .form-registro-inicio input[type="text"],
 .form-registro-inicio input[type="email"], 
@@ -84,7 +86,7 @@ body {
   outline: none;
 }
 .container-custom-inicio .form-group ::placeholder{
-  color: rgb(255,255,255,.7);
+  color: rgba(255,255,255,0.7);
 }
 .form-registro-inicio input[type="file"] { 
 width: 100%; 
@@ -237,8 +239,16 @@ text-align: center;
 }
 /*fin de div container container custom inicio*/
 /*contenerdor principal*/
+
 #divPrincipal{
     display: none;        
+}
+.div-custom-principal .div-sucundario{
+  /*border: 1px solid #000;*/
+  margin-bottom: 35px;
+  margin-top:5px;
+  padding: 10px;
+  background-color: #fff;
 }
 .container-custom-principal{
   background-color: #f2f2f2;
@@ -256,20 +266,91 @@ text-align: center;
 }
 .container-custom-principal .inner-addon {
   position: relative;
-
 }
 .container-custom-principal .inner-addon .glyphicon {
   position: absolute;
   padding: 10px;
   pointer-events: none;
 }
+.container-custom-principal .left-addon .glyphicon {
+  left: 0px;
+  color:#009999;  /*#246175;*/
+}
 .container-custom-principal .right-addon .glyphicon {
   right: 0px;
   color: #008080;  /*#f2f2f2#246175;*/
 }
-.container-custom-principal .form-group ::placeholder{
-  color: rgb(128, 128, 128,.6);
+
+.container-custom-principal .left-addon input {
+  padding-left: 30px;
 }
+.container-custom-principal .right-addon input {
+  padding-right: 30px;
+}
+.container-custom-principal  .label-custom {    
+    color:#b3cccc;
+}
+.container-custom-principal .label-custom-medio{
+  
+  margin: 1px;
+  text-align: center;
+  color:#008080;
+}
+.container-custom-principal .label-custom-gris {
+  margin: 0;
+  text-align: center;    
+  color:#b3cccc;
+}
+.container-custom-principal button.btnFormularioPrincipal {
+    border:none;
+    background-color:#008080; 
+    text-decoration:none; 
+    color:#f2f2f2; 
+    cursor:pointer;
+    outline: none;
+    border-radius: 0;
+
+}
+.container-custom-principal button.btnFormularioPrincipal:focus {
+    border:none;
+    background-color:#004d4d; 
+    text-decoration:none; 
+    color:#f2f2f2; 
+    cursor:pointer;
+    /*outline: none
+    border-radius: 0;*/
+}
+
+
+/* usar en caso de un div como boton actualizar */
+/*.footerbtn .btnActualizar{
+  background-color:#008080;
+  text-align: center;
+  color:#f2f2f2;
+  padding: 10px;
+}*/
+
+.container-custom-principal .form-group ::placeholder{
+  color: rgba(128, 128, 128,.6);
+}
+.container-custom-principal .text-danger-custom{
+  color: #ffcccc;
+}
+.text-danger-custom1{
+  color: #ff8080;
+}
+.container-custom-principal #mensajefotoA{
+    margin: auto;
+    padding: 5px;
+    display: none;
+}
+.container-custom-principal .text-success-custom{
+  color: #cce6ff;
+}
+.container-custom-principal .text-danger-custom{
+  color: #ffcccc;
+}
+
 #mensajeCiudad{
  margin-top: 82px; 
 }
@@ -286,7 +367,7 @@ padding: 3px;
 }
 .fotosBarrios {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 90px;
   display: -webkit-flex; /* Safari */        
   display: flex;
   flex-wrap: wrap;
@@ -294,6 +375,19 @@ padding: 3px;
   border-radius: 2px;
   
   /*border: 1px #000 solid; */
+}
+.fotosLista{
+
+margin-top: 65px;
+/* border: 1px #000 solid;      */
+display: grid;
+grid-template-columns: auto ;
+
+}
+.fotosLista img{
+width: 100%;
+height: auto;
+
 }
 .foto{
   display: flex;
@@ -322,26 +416,15 @@ padding: 3px;
     width: 100%;
     height: auto;
 }
-.fotosLista{
 
-margin-top: 65px;
-/* border: 1px #000 solid;      */
-display: grid;
-grid-template-columns: auto ;
 
-}
-.fotosLista img{
-width: 100%;
-height: auto;
-
-}
-
+/*font-family: 'Noto Sans', sans-serif;*/
 #contenedorListaMapa {
             position: absolute;
             top: 85px;
             
             width: 350px;
-            height: 30%;
+            height: 24%;
             /*width: 350px;
             height: 240px;*/
            
@@ -363,7 +446,7 @@ height:70%;
             padding: 0;
             margin: 0;
             width: 1210px;
-
+            height: 100%;
             transition-property: transform;
             transition-duration: 0.5s;
             transition-timing-function: ease-out;
@@ -372,11 +455,12 @@ height:70%;
             time we add the transform you get odd rendering of the divs (half missing) */
             transform: translate(0, 0);
           }
-.fotoH {
+.fotoH {    
+            display: flex;
             padding: 0;
             margin: 0;
             width: 350px;
-            height: 100%;
+            height: 50%;/* no lo toma en cuenta ver luego*/
             text-align: center;
            /*border: 1px solid red;*/
             /*apply a transform to kick in the hardware acceleration.  Without this, the first
@@ -388,9 +472,10 @@ height:70%;
             */
             transform: translate(0, 0);
           }
-.fotoH img{
+
+.fotoD img{
             width: 350px;
-            height: 50%;
+            /*height: 30%;*/
            /*border: 1px solid green;*/
         }
 
@@ -403,23 +488,59 @@ height:70%;
   position: absolute;
   bottom:2px;
   width: 95%;
-  height: 55%;
+  height: 64%;
 }
 #map{
+  position: relative;  
+  width: 100%;
+  height: 100%; 
+  margin: 0;
+  padding: 0; 
+  border: 1px solid #000;
+    
+}
+
+.contenedorMapaDireccion{
+  background: #fff;
+  padding: 0px auto;
+  /*border: 1px solid #000;*/
+  position: absolute;
+  bottom: 42px;
+  
+  width: 95%;
+  height: 65%;
+  display: none;
+}
+/*#mapDireccion{
   position: relative;
   
   width: 100%;
   height: 100%; 
   margin: 0;
-  padding: 0;
-      /*bottom:1px;*/
-  /*margin: 0 auto;
-  
-  height: 500px;*/
+  padding: 0; 
   border: 1px solid #000;
     
+}*/
+#mapDireccionBuscar{
+  position: relative;
+  /*display: none;*/
+  width: 100%;
+  height: 100%; 
+  margin: 0;
+  padding: 0; 
+  /*border: 1px solid #000;*/
+    
 }
-
+#mapDireccionLink{
+  position: relative;
+  /*display: none;*/
+  width: 100%;
+  height: 100%; 
+  margin: 0;
+  padding: 0; 
+  /*border: 1px solid #000;*/
+    
+}
 
 .navtab-custom-principal {
    background-color:#008080;
@@ -461,11 +582,357 @@ height:70%;
     /*padding: 10px ;*/
     /*background-color: rgb(0, 0, 0, 0.6); */
     background: #f2f2f2;
-    border: 1px solid #f2f2f2; /**no quitar*/
+    border: 1px solid #f2f2f2; /*no quitar*/
+}
+.mensajeDondeVivir{
+  padding: 10px auto;
+  margin: 2px auto;  
+}
+#paginaListaMapas{
+    display: none;    
+}
+#paginaUsuarioPerfilEditar{
+    display: none;    
+}
+#paginaUsuarioPerfilMostrar{
+    display: none;    
+}
+/*Btn Flotante Publicar*/
+.container-custom-principal button.btnPrincipalPublicar {
+   display:scroll;
+    position:fixed;
+    bottom:50px;
+    left: 10px;
+    width: 95%;
+    height: 35px;
+    background: linear-gradient(135deg, #4fd8f5, #008080);
+    border:none;
+    font-size: 20px;
+    text-decoration:none; 
+    color:#f2f2f2; 
+    cursor:pointer;
+    outline: none;
+    border-radius: 20px;
+    /*background-color:#008080; */
+}
+/*div Publicar*/
+#paginaPublicar{
+    display: none;    
+}
+.publicarFotoUbicacion{
+  display: none;
+}
+.publicarDirecion{
+  display: none;
+ } 
+.publicarCaracteristicas{
+  display: none;
+}
+.publicarPiso{
+  display: none;
 }
 
+.div-custom-principal .contenedorDireccion{
+  position: absolute;
+  /*border: 1px solid red;  */
+  top:40px;
+  width: 95%;
+  margin: 0px;
+  padding: 10px;
+  background-color: #fff;
+}
+.div-custom-principal .divPublicar{
+  /*border: 1px solid pink;*/
+  margin-bottom: 35px;
+  margin-top:40px;
+  padding: 10px;
+  background-color: #fff;
+}
+.container-custom-principal button.btnFormularioContinuar {
+    border:none;
+    background-color:#008080;/*transparent;*/
+    text-decoration:none; 
+    color:#f2f2f2;
+    cursor:pointer;
+    outline: none;
+    border-radius: 0;
 
+}
+.container-custom-principal .progress-custom{
+  padding: 0;
+  margin:0;
+  height: 5px;
+  border-radius: 0;
+  /*border: 1px solid red;*/
+}
+.container-custom-principal .progressbar-bar-custom{
+  padding: 0;
+  margin:0;
+  width: 33%;
+  background-color:#008080;
+  /* border: 1px solid blue;*/
+}
+.form-principal-publicar input[type="text"],
 
+.form-principal-publicar input[type="date"] {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid #008080;
+  color: #0d0d0d;
+  box-shadow: none; 
+}
+.form-principal-publicar textarea {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid #008080;
+  color: #0d0d0d;
+  box-shadow: none; 
+}
+.form-principal-publicar textarea:focus {
+  box-shadow: none; 
+}
+/*.form-principal-publicar input[type="text"]:focus,
+
+.form-principal-publicar input[type="date"]:focus {
+  border: none;
+  outline: 0; 
+  box-shadow: none; 
+}*/
+.form-principal-publicar input[type="file"]{
+opacity: 0;
+position: absolute;
+z-index: -1;  
+}
+.divImgPublicarG {
+  border:1px solid #008080; 
+}
+.divImgPublicarG img{
+  margin:10px auto;
+  display:block;
+  width: 40%;
+  height: 40%;
+border:1px solid #008080;  
+}
+
+.divImgPublicarP img{
+  margin:0 auto;
+  /*display:block;*/
+  width: 80%;
+  height: 90%;
+/*border:1px solid #008080;  */
+}
+.imgPublicar{
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border:1px solid #000;
+}
+.fotoPublicar{
+  height: 80px; 
+  width: 80px;
+  margin: 3px;
+  display: flex;
+  flex-direction: column;      
+  border-radius: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.removeImgPublicar {
+margin: 2px;
+padding: 2px;
+background: #f2f2f2;
+width: 15px;
+height: 15px;
+border-radius: 2px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+color:#008080; 
+}
+#divImgPublicarP{
+  width: 80px;
+  height: 80px;
+  display: none;
+  border-radius: 5px;
+  padding: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border:1px solid #008080; 
+}
+.container-custom-principal .label-custom-negro{
+  margin: 0;
+  text-align: center;
+  color:#000; 
+}
+.container-custom-principal .label-custom-color{
+  padding-left: 10px;
+  color:#008080; /*#f2f2f2;*/
+}
+.container-custom-principal .headerPublicar {
+  font-size: 17px;
+  
+  
+}
+/*div Perfil */
+.container-custom-principal button.btn-circle {
+        display:scroll;
+        position:relative;
+        top:0px;
+        left: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 6px 0;
+    line-height: 1.428571429;
+    text-align: center;
+    border:none;
+    background-color:#008080; 
+    text-decoration:none; 
+    color:#f2f2f2; 
+    cursor:pointer;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    
+}
+.container-custom-principal button.btn-circle:focus {
+    
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border:none;
+    background-color:#004d4d; 
+    text-decoration:none; 
+    color:#f2f2f2; 
+    cursor:pointer;
+    outline: none
+    
+}
+/*.btn-circle {
+  
+  
+  
+  font-size: 12px;
+  line-height: 1.428571429;
+  
+}*/
+.form-principal-perfil input[type="text"],
+.form-principal-perfil input[type="email"],
+.form-principal-perfil input[type="date"],
+.form-principal-perfil input[type="tel"], 
+.form-principal-perfil input[type="password"] {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid #008080;
+  color: #0d0d0d; 
+  box-shadow: none;
+  /*outline: none;*/
+}
+/* transparente al radio*/
+.form-principal-perfil input[type="radio"] { 
+  opacity: 0.5; 
+  width: 90%;
+  height: 90%;
+  
+}
+
+/* IMAGE STYLES */
+/*.form-principal-perfil input[type=radio] + img {
+  cursor: pointer;
+}*/
+.form-principal-perfil ::placeholder{
+  color: rgba(128,128,128,.6);
+}
+.fotoMensaje .imgPerfil {
+ margin-left: 5px; 
+ background: #c2c2c2 url(../img/usuario.jpg) no-repeat center center;
+ height: 150px; 
+ width: 200px;
+ background-size: 200px 100px;
+ border-radius: 3px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ /*opacity: 0.8;*/
+ /*border: 1px solid #000;*/
+}
+#clistA {
+margin: 2px;
+padding: 2px;
+background: #f2f2f2;
+width: 17px;
+height: 17px;
+visibility: hidden;
+border-radius: 2px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+color:#008080; 
+}
+.fotoPerfilM{
+  width: 100%;
+  height: 200px;
+  /*background-size: 100% 200px;*/
+  border: 1px solid red;
+
+}
+.divSexo{
+text-align: center;
+color: #999999;
+font-size: 6px;
+margin-left: 30px;
+padding: 6px; 
+border-radius: 5px;
+border:1px solid #999999;   
+}
+.divSexo .imgSexoRH {
+ 
+ margin-bottom: 10px; 
+ background: url(../img/hombreG.png) no-repeat center center;
+ height: 25px; 
+ width: 25px;
+ background-size: 25px 25px;
+ border-radius: 4px;
+ /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+ /*opacity: 0.8;*/
+ /*border: 1px solid #000;*/
+}
+.divSexo .imgSexoRM {
+  margin-bottom: 10px; 
+ background: url(../img/mujerG.png) no-repeat center center;
+ height: 25px; 
+ width: 25px;
+ background-size: 25px 25px;
+ border-radius: 4px;
+ /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+ /*opacity: 0.8;*/
+ /*border: 1px solid #000;*/
+}
+.divCarac{
+text-align: center;
+color: #999999;
+font-size: 6px;
+margin-left: 10px;
+padding: 6px; 
+border-radius: 5px;
+border:1px solid #999999;   
+}
+.divCarac #imgSexo {
+ 
+ margin-bottom: 10px; 
+ background: url(../img/mujerG.png) no-repeat center center;
+ height: 20px; 
+ width: 20px;
+ background-size: 20px 20px;
+ border-radius: 2px;
+}
+.form-principal-perfil input[type="file"] { 
+width: 100%; 
+height: 100%; 
+opacity: 0; 
+/*cursor:  pointer;*/
+}
+/*fin de perfil*/
 /*iconos footer*/
 .container-custom-principal .footer{
   padding: 0 auto;
@@ -477,23 +944,17 @@ height:70%;
 }
 .footer .glyphicon {
   pointer-events: none;
-  color:rgb(128, 128, 128,.8);/*#008080;  */
+  color:rgba(128, 128, 128,.8);/*#008080;  */
 }
  .footer .icoFooter{
   
   display: inline-block;
   width:24%;
   text-align: center; 
+   padding: 5px;
 
 }
 .footer .icoFooterMensaje{
   font-size: 10px;
  /* display: none;*/
-}
-.mensajeDondeVivir{
-  padding: 10px auto;
-  margin: 2px auto;  
-}
-#paginaListaMapas{
-    display: none;    
 }

@@ -3,6 +3,19 @@ var currentDiv = 0;
 var maxDivs = 6;
 var speed = 500;
 var divs;
+var widthDiv;
+$(document).ready(function(){
+    widthDiv=$(".div-custom-principal").width()
+    //alert("div " + widthDiv);
+    
+    $('#contenedorListaMapa').css({ 'width':widthDiv+'px' });//,height: 50%;
+    $(".fotoH").css({ "width":(widthDiv)+"px","height": "90%" });
+    $('.fotoD img' ).css({ 'width':(widthDiv/2)+'px','height': "90%" });
+    $('.fotoD').css({ 'width':(widthDiv/2)+'px','height': "90%" });
+    DIV_WIDTH=widthDiv;
+
+});
+
 
 var swipeOptions = {triggerOnTouchEnd: true, swipeStatus: swipeStatus,allowPageScroll: "vertical",threshold: 75 };
 

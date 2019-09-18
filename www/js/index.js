@@ -15,31 +15,51 @@ var app = {
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        alert("hola receivedEvent");
+        //alert("hola receivedEvent");
         //getMapLocation();
     }
 };
 
 app.initialize();
-alert("hola app 1");
+//alert("hola app 1");
 var Latitude = undefined;
 var Longitude = undefined;
-// Get geo coordinates
+//var LatitudePos = undefined;
+//var LongitudePos = undefined;
+
 var customLabel = {restaurant: {label: 'R'}, bar: {label: 'B'},casa:{label: 'C'}};
+/*function getPosition(){
+  //alert("entra pos");
+  navigator.geolocation.getCurrentPosition(onPosSuccess, onPosError, { enableHighAccuracy: true });  
+}
+var onPosSuccess = function (position) {
+  alert("latLon");
+  LatitudePos = position.coords.latitude;
+  LongitudePos = position.coords.longitude;
+    //$('#lat').text(Latitude);
+    //$('#lon').text(Longitude);
+  //getMap(Latitude, Longitude);
+    
+
+}// Get map by using coordinates
+function onPosError(error) {
+    alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+}
+*/
+// Get geo coordinates
 function getMapLocation() {
 
-    navigator.geolocation.getCurrentPosition(onMapSuccess, onMapError, { enableHighAccuracy: true });
+  navigator.geolocation.getCurrentPosition(onMapSuccess, onMapError, { enableHighAccuracy: true });
     //alert("getMapLocation 2");
 }
 // Success callback for get geo coordinates
 var onMapSuccess = function (position) {
-
-    Latitude = position.coords.latitude;
-    Longitude = position.coords.longitude;
-    $('#lat').text(Latitude);
-    $('#lon').text(Longitude);
-    getMap(Latitude, Longitude);
-    //alert("onMapSuccess 3");
+  Latitude = position.coords.latitude;
+  Longitude = position.coords.longitude;
+    //$('#lat').text(Latitude);
+    //$('#lon').text(Longitude);
+  getMap(Latitude, Longitude);
+    //alert("latLon"+Longitude+" "+Longitude);
 
 }// Get map by using coordinates
 
@@ -70,7 +90,7 @@ function getMap(latitude, longitude) {
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
-          downloadUrl('http://192.168.0.161/wasiWeb/php/marcas.php', function(data) {
+          downloadUrl('http://192.168.0.160/wasiWeb/php/marcas.php', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
@@ -155,7 +175,7 @@ var onWeatherSuccess = function (position) {
 
     Latitude = position.coords.latitude;
     Longitude = position.coords.longitude;
-    alert("lat"+ Latitude + "lon "+ Longitude);
+    //alert("lat"+ Latitude + "lon "+ Longitude);
     getWeather(Latitude, Longitude);
 }
 
